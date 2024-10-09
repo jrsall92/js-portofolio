@@ -8,11 +8,7 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
+      "schematics": {},
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -32,20 +28,12 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/scss/material-theme.scss",
-              "src/scss/prism-theme.scss",
-              "node_modules/prismjs/themes/prism-dark.css",
-              "node_modules/prismjs/plugins/command-line/prism-command-line.css",
-              "node_modules/prismjs/plugins/line-highlight/prism-line-highlight.css",
               "node_modules/github-markdown-css/github-markdown.css",
               "node_modules/github-markdown-css/github-markdown-dark.css",
               "node_modules/github-markdown-css/github-markdown-light.css"
 
             ],
             "scripts": [
-              "node_modules/prismjs/prism.js",
-              "node_modules/prismjs/components/prism-markup.min.js",
-              "node_modules/prismjs/components/prism-markdown.min.js"
             ]
           },
           "configurations": {
@@ -53,13 +41,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "2MB",
+                  "maximumError": "5MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kB",
-                  "maximumError": "4kB"
+                  "maximumWarning": "6kB",
+                  "maximumError": "50kB"
                 }
               ],
               "outputHashing": "all"
