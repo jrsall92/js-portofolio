@@ -5,10 +5,14 @@
   "projects": {
     "Portfolio": {
       "projectType": "application",
-      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -27,9 +31,22 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/scss/material-theme.scss",
+              "src/scss/prism-theme.scss",
+              "node_modules/prismjs/themes/prism-dark.css",
+              "node_modules/prismjs/plugins/command-line/prism-command-line.css",
+              "node_modules/prismjs/plugins/line-highlight/prism-line-highlight.css",
+              "node_modules/github-markdown-css/github-markdown.css",
+              "node_modules/github-markdown-css/github-markdown-dark.css",
+              "node_modules/github-markdown-css/github-markdown-light.css"
+
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/prismjs/prism.js",
+              "node_modules/prismjs/components/prism-markup.min.js",
+              "node_modules/prismjs/components/prism-markdown.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -87,7 +104,8 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           }
         },
         "deploy": {
