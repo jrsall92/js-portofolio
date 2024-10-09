@@ -1,0 +1,9 @@
+<section class="py-16 bg-gray-100">
+  <h2 class="text-3xl font-bold text-gray-800 text-center">My Projects</h2>
+  <nav class="mt-8 grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+    @for (project of projects; track project.projectTitle) {
+      <app-project-tile [projectTitle]=project.projectTitle [shortDescription]=project.shortDescription></app-project-tile>
+    }
+  </nav>
+</section>
+
