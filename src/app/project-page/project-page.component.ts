@@ -1,8 +1,6 @@
 import {Component} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 import {MarkdownComponent} from 'ngx-markdown';
-import 'prismjs';
-import 'prismjs/components/prism-markdown.js';
 
 @Component({
   selector: 'app-project-page',
