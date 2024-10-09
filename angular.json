@@ -31,7 +31,6 @@
               "node_modules/github-markdown-css/github-markdown.css",
               "node_modules/github-markdown-css/github-markdown-dark.css",
               "node_modules/github-markdown-css/github-markdown-light.css"
-
             ],
             "scripts": [
             ]
